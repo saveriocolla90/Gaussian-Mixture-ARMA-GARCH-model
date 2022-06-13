@@ -1,0 +1,191 @@
+:test-result: PASS empty datetime() constructor 
+:test-result: PASS semi-empty datetime() constructor 
+:test-result: PASS datetime + timedelta(milliseconds = 100) 
+:test-result: PASS datetime + timedelta(milliseconds = -100) 
+:test-result: PASS datetime + timedelta(seconds = 1) 
+:test-result: PASS datetime + timedelta(seconds = -1) 
+:test-result: PASS datetime + timedelta(minutes = 1) 
+:test-result: PASS datetime + timedelta(minutes = -1) 
+:test-result: PASS datetime + timedelta(hours = 1) 
+:test-result: PASS datetime + timedelta(hours = -1) 
+:test-result: PASS datetime + timedelta(days = 1) 
+:test-result: PASS datetime + timedelta(days = -1) 
+:test-result: PASS Seconds overflow in addMilliseconds (3000 milliseconds) 
+:test-result: PASS Seconds overflow in addMilliseconds (-3000 milliseconds) 
+:test-result: PASS Minutes overflow in addSeconds (360 seconds) 
+:test-result: PASS Minutes overflow in addSeconds (-360 seconds) 
+:test-result: PASS Hours overflow in addMinutes (360 minutes) 
+:test-result: PASS Hours overflow in addMinutes (-360 minutes) 
+:test-result: PASS Days overflow in addHours (72 hours) 
+:test-result: PASS Days overflow in addHours (-72 hours) 
+:test-result: PASS decrement datetime into January 
+:test-result: PASS decrement datetime into February 
+:test-result: PASS decrement datetime into March 
+:test-result: PASS decrement datetime into April 
+:test-result: PASS decrement datetime into May 
+:test-result: PASS decrement datetime into June 
+:test-result: PASS decrement datetime into July 
+:test-result: PASS decrement datetime into August 
+:test-result: PASS decrement datetime into September 
+:test-result: PASS decrement datetime into October 
+:test-result: PASS decrement datetime into November 
+:test-result: PASS decrement datetime into December 
+:test-result: PASS datetime-datetime == timedelta(days = 1) 
+:test-result: PASS datetime-datetime == timedelta(hours = 1) 
+:test-result: PASS datetime-datetime == timedelta(minutes = 1) 
+:test-result: PASS datetime-datetime == timedelta(seconds = 1) 
+:test-result: PASS datetime-datetime == timedelta(milliseconds = 1) 
+:test-result: PASS datetime == datetime 
+:test-result: PASS datetime == datetime, timezone test 1 
+:test-result: PASS datetime == datetime, timezone test 2 
+:test-result: PASS datetime /= datetime 
+:test-result: PASS datetime > datetime 
+:test-result: PASS datetime >= datetime (greater) 
+:test-result: PASS datetime >= datetime (equal) 
+:test-result: PASS datetime < datetime 
+:test-result: PASS datetime <= datetime (less) 
+:test-result: PASS datetime <= datetime (equal) 
+:test-result: PASS datetime % isoformat, default separator 
+:test-result: PASS datetime % isoformat, T separator 
+:test-result: PASS datetime % isoformat, blank separator 
+:test-result: PASS datetime % strftime 
+:test-result: PASS datetime % strptime 
+:test-result: PASS strptime(datetime % strftime(fmt), fmt) == datetime 
+:test-result: PASS datetime(2005, 1, 1) % isocalendar() == [2004, 53, 6] 
+:test-result: PASS datetime(2005, 1, 2) % isocalendar() == [2004, 53, 7] 
+:test-result: PASS datetime(2005, 12, 31) % isocalendar() == [2005, 52, 6] 
+:test-result: PASS datetime(2007, 1, 1) % isocalendar() == [2007, 1, 1] 
+:test-result: PASS datetime(2007, 12, 30) % isocalendar() == [2007, 52, 7] 
+:test-result: PASS datetime(2007, 12, 31) % isocalendar() == [2008, 1, 1] 
+:test-result: PASS datetime(2008, 1, 1) % isocalendar() == [2008, 1, 2] 
+:test-result: PASS datetime(2008, 12, 28) % isocalendar() == [2008, 52, 7] 
+:test-result: PASS datetime(2008, 12, 29) % isocalendar() == [2009, 1, 1] 
+:test-result: PASS datetime(2008, 12, 30) % isocalendar() == [2009, 1, 2] 
+:test-result: PASS datetime(2008, 12, 31) % isocalendar() == [2009, 1, 3] 
+:test-result: PASS datetime(2009, 1, 1) % isocalendar() == [2009, 1, 4] 
+:test-result: PASS datetime(2009, 12, 31) % isocalendar() == [2009, 53, 4] 
+:test-result: PASS datetime(2010, 1, 1) % isocalendar() == [2009, 53, 5] 
+:test-result: PASS datetime(2010, 1, 2) % isocalendar() == [2009, 53, 6] 
+:test-result: PASS datetime(2010, 1, 3) % isocalendar() == [2009, 53, 7] 
+:test-result: PASS datetime(1, 1, 1) is valid 
+:test-result: PASS datetime(0, 1, 1) is not valid 
+:test-result: PASS datetime(-1, 1, 1) is not valid 
+:test-result: PASS datetime(2014, 1, 1) is valid 
+:test-result: PASS datetime(2014, 0, 1) is not valid 
+:test-result: PASS datetime(2014, 1, 0) is not valid 
+:test-result: PASS datetime(2014, 2, 28) is valid 
+:test-result: PASS datetime(2014, 2, 29) is not valid 
+:test-result: PASS datetime(2012, 2, 29) is valid 
+:test-result: PASS datetime(2012, 3, 31) is valid 
+:test-result: PASS datetime(2012, 3, 32) is not valid 
+:test-result: PASS datetime(2012, 3, 31, 0, 0, 0) is valid 
+:test-result: PASS datetime(2012, 3, 31, 24, 0, 0) is not valid 
+:test-result: PASS datetime(2012, 3, 31, 0, 60, 0) is not valid 
+:test-result: PASS datetime(2012, 3, 31, 0, 0, 60) is not valid 
+:test-result: PASS datetime(2012, 3, 31, 0, 0, 0, 1000) is not valid 
+:test-result: PASS datetime % secondsSinceEpoch(), 0 seconds 
+:test-result: PASS datetime % secondsSinceEpoch(), 1 hour 
+:test-result: PASS datetime % secondsSinceEpoch(), -1 hour 
+:test-result: PASS datetime % tzOffset(), +0000 
+:test-result: PASS datetime % tzOffset(), -0330 
+:test-result: PASS datetime % tzOffset(), +0545 
+:test-result: PASS datetime % utc(), +0000 
+:test-result: PASS datetime % weekday(), Wednesday 
+:test-result: PASS datetime % weekday(), Thursday 
+:test-result: PASS datetime % weekday(), Friday 
+:test-result: PASS datetime % weekday(), Saturday 
+:test-result: PASS datetime % weekday(), Sunday 
+:test-result: PASS datetime % weekday(), Monday 
+:test-result: PASS datetime % weekday(), Tuesday 
+:test-result: PASS datetime % isoweekday(), Wednesday 
+:test-result: PASS datetime % isoweekday(), Thursday 
+:test-result: PASS datetime % isoweekday(), Friday 
+:test-result: PASS datetime % isoweekday(), Saturday 
+:test-result: PASS datetime % isoweekday(), Sunday 
+:test-result: PASS datetime % isoweekday(), Monday 
+:test-result: PASS datetime % isoweekday(), Tuesday 
+:test-result: PASS datetime % weekdayLong(), Wednesday 
+:test-result: PASS datetime % weekdayLong(), Thursday 
+:test-result: PASS datetime % weekdayLong(), Friday 
+:test-result: PASS datetime % weekdayLong(), Saturday 
+:test-result: PASS datetime % weekdayLong(), Sunday 
+:test-result: PASS datetime % weekdayLong(), Monday 
+:test-result: PASS datetime % weekdayLong(), Tuesday 
+:test-result: PASS datetime % isoweekdayLong(), Wednesday 
+:test-result: PASS datetime % isoweekdayLong(), Thursday 
+:test-result: PASS datetime % isoweekdayLong(), Friday 
+:test-result: PASS datetime % isoweekdayLong(), Saturday 
+:test-result: PASS datetime % isoweekdayLong(), Sunday 
+:test-result: PASS datetime % isoweekdayLong(), Monday 
+:test-result: PASS datetime % isoweekdayLong(), Tuesday 
+:test-result: PASS datetime % weekdayShort(), Wed 
+:test-result: PASS datetime % weekdayShort(), Thu 
+:test-result: PASS datetime % weekdayShort(), Fri 
+:test-result: PASS datetime % weekdayShort(), Sat 
+:test-result: PASS datetime % weekdayShort(), Sun 
+:test-result: PASS datetime % weekdayShort(), Mon 
+:test-result: PASS datetime % weekdayShort(), Tue 
+:test-result: PASS datetime % isoweekdayShort(), Wed 
+:test-result: PASS datetime % isoweekdayShort(), Thu 
+:test-result: PASS datetime % isoweekdayShort(), Fri 
+:test-result: PASS datetime % isoweekdayShort(), Sat 
+:test-result: PASS datetime % isoweekdayShort(), Sun 
+:test-result: PASS datetime % isoweekdayShort(), Mon 
+:test-result: PASS datetime % isoweekdayShort(), Tue 
+:test-result: PASS datetime(2014, 1, 1) % yearday() == 1 
+:test-result: PASS datetime(2014, 2, 1) % yearday() == 32 
+:test-result: PASS datetime(2014, 3, 1) % yearday() == 60 
+:test-result: PASS datetime(2014, 4, 1) % yearday() == 91 
+:test-result: PASS datetime(2014, 5, 1) % yearday() == 121 
+:test-result: PASS datetime(2014, 6, 1) % yearday() == 152 
+:test-result: PASS datetime(2014, 7, 1) % yearday() == 182 
+:test-result: PASS datetime(2014, 8, 1) % yearday() == 213 
+:test-result: PASS datetime(2014, 9, 1) % yearday() == 244 
+:test-result: PASS datetime(2014, 10, 1) % yearday() == 275 
+:test-result: PASS datetime(2014, 11, 1) % yearday() == 305 
+:test-result: PASS datetime(2014, 12, 1) % yearday() == 335 
+:test-result: PASS timedelta empty constructor 
+:test-result: PASS timedelta % total_seconds(), milliseconds conversion 
+:test-result: PASS timedelta % total_seconds(), seconds conversion 
+:test-result: PASS timedelta % total_seconds(), minutes conversion 
+:test-result: PASS timedelta % total_seconds(), hours conversion 
+:test-result: PASS timedelta % total_seconds(), days conversion 
+:test-result: PASS datetime % utc() == num2date(date2num(datetime)) (now) 
+:test-result: PASS datetime == num2date(date2num(datetime)) (overflowing month)
+:test-result: PASS datetime == num2date(date2num(datetime)) (overflowing year) 
+:test-result: PASS datetimeRange, day increment 
+:test-result: PASS datetimeRange, hour increment 
+:test-result: PASS datetimeRange, minute increment 
+:test-result: PASS datetimeRange, second increment 
+:test-result: PASS datetimeRange, rounding test 
+:test-result: PASS isLeapYear(1) == F 
+:test-result: PASS isLeapYear(4) == T 
+:test-result: PASS isLeapYear(100) == F 
+:test-result: PASS isLeapYear(400) == T 
+:test-result: PASS isLeapYear(2000) == T 
+:test-result: PASS isLeapYear(2014) == F 
+:test-result: PASS daysInYear(2014) == 365 
+:test-result: PASS daysInYear(2012) == 366 
+:test-result: PASS daysInYear(2000) == 366 
+:test-result: PASS daysInYear(1900) == 365 
+:test-result: PASS daysInMonth(1, 2014) == 31 
+:test-result: PASS daysInMonth(2, 2014) == 28 
+:test-result: PASS daysInMonth(2, 2012) == 29 
+:test-result: PASS daysInMonth(3, 2014) == 31 
+:test-result: PASS daysInMonth(4, 2014) == 30 
+:test-result: PASS daysInMonth(5, 2014) == 31 
+:test-result: PASS daysInMonth(6, 2014) == 30 
+:test-result: PASS daysInMonth(7, 2014) == 31 
+:test-result: PASS daysInMonth(8, 2014) == 31 
+:test-result: PASS daysInMonth(9, 2014) == 30 
+:test-result: PASS daysInMonth(10, 2014) == 31 
+:test-result: PASS daysInMonth(11, 2014) == 30 
+:test-result: PASS daysInMonth(12, 2014) == 31 
+:test-result: PASS clock % started == F (before tick) 
+:test-result: PASS clock % started == T (after 1 tick) 
+:test-result: PASS clock % stopped == F (after 1 tick) 
+:test-result: PASS clock % currentTime == clock % stopTime (after 24 ticks) 
+:test-result: PASS clock % stopped == T (after 24 ticks) 
+:test-result: PASS clock % started == F (after reset) 
+:test-result: PASS clock % stopped == F (after reset) 
+:test-result: PASS clock % currentTime == clock % startTime (after reset) 
