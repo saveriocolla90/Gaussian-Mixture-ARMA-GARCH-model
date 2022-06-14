@@ -1,3 +1,0 @@
-﻿  Main.cpp
-F:\Desktop\My Documents\Binance_bot\ARCH_GARCH_model\InputOutput.h(59,17): warning C4244: 'argomento': conversione da 'std::streamoff' a 'const unsigned int'. Possibile perdita di dati.
-  ARCH_GARCH_model.vcxproj -> F:\Desktop\My Documents\Binance_bot\ARCH_GARCH_model\Debug\ARCH_GARCH_model.exe
